@@ -1,12 +1,20 @@
+import ReactYoutube from "../components/ReactYoutube";
 import Videos from "../components/Videos";
 
 export default function Homepage() {
 
   
   return (
-    <div className="bg-amber-200">
-      <h1>Homepage</h1>
-      <Videos />
+    <div className="bg-slate-900 text-white flex flex-col 
+     w-screen h-screen overflow-hidden"
+    >
+      <h1 className="font-mono text-7xl">Chillitivity</h1>
+      <div className="flex justify-center items-center m-9">
+        <p className="justify-center">arrow</p>
+        <Videos />
+        <p className="justify-center items-center">arrow</p>
+      </div>
+
     </div>
   );
 }
