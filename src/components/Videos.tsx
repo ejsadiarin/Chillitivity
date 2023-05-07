@@ -34,7 +34,7 @@ export default function Videos() {
         unselectable='on'
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowFullScreen
-        className='' 
+        className='w-[80vw] h-[80vh]' 
       />    
     </div>
   );
