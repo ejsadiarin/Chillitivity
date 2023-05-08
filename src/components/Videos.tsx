@@ -22,9 +22,11 @@ export default function Videos() {
 
   }
 
+  // Check YouTube iframe API reference for customization
+ // test 
   return(
     <div>
-      <h1>lofi hip hop radio 📚 - beats to relax/study to</h1>
+      <h1 className='text-sm'>lofi hip hop radio 📚 - beats to relax/study to</h1>
       <iframe 
         width="700" 
         height="450" 
