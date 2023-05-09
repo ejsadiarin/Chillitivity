@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='overflow-hidden flex '>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Homepage />
     </div>
   )
