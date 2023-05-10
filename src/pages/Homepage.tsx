@@ -14,6 +14,7 @@ export default function Homepage() {
       {/* <div className="flex justify-center items-center m-9 "> */}
         {/* <AiFillCaretLeft className="text-red-500 text-9xl"/> */}
         <Videos />
+        {/* use React Youtube for built in opts, and params */}
         {/* <AiFillCaretRight className="text-red-500 text-9xl"/> */}
       {/* </div> */}
 
