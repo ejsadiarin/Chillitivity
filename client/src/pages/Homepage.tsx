@@ -1,4 +1,3 @@
-import ReactYoutube from "../components/ReactYoutube";
 import Videos from "../components/Videos";
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 
@@ -17,7 +16,6 @@ export default function Homepage() {
        {/* <div className="flex justify-center items-center m-9 "> */}
         {/* <AiFillCaretLeft className="text-red-500 text-9xl"/> */}
         <Videos />
-
       </div>
 
     </div>
