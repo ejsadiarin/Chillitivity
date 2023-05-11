@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 
 const ReactYoutube: React.FC = () => {
+  const [data, setData] = useState(""); 
 
   const handleOnReady: YouTubeProps['onReady'] = (event: any) => {
     event.target.playVideo();
