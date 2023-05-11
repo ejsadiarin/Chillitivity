@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 declare global {
   interface window {
@@ -10,9 +10,8 @@ declare global {
 // const apiKey = "AIzaSyDjw87K6xjMnMtfgvgFMuZsDj8BZ0d37Aw"; // change and put into .env
 // const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCSJ4gkVC6NrvII8umztf0Ow&eventType=live&maxResults=3&q=news&type=video&key=${apiKey}`;
 
-
-export default function Videos() {
-  // const [title, setTitle] = useState([]);
+export default function Youtube() {
+  const [title, setTitle] = useState([]);
 
   // useEffect(() => {
   //   async function getVideos() {    
@@ -27,7 +26,7 @@ export default function Videos() {
 
   // Check YouTube iframe API reference for customization
  // test 
-  return(
+  return (
     <div>
       {/* <h1 className='text-sm'>lofi hip hop radio 📚 - beats to relax/study to</h1> */}
       <iframe 
@@ -38,7 +37,6 @@ export default function Videos() {
         frameBorder="0" 
         unselectable='on'
         // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        
         className='w-[35rem] h-96' 
       />    
     </div>

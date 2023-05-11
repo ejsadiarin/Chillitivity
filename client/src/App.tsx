@@ -1,16 +1,12 @@
-import { useState } from 'react'
-import Homepage from './pages/Homepage'
-import Sidebar from './components/Sidebar'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className='overflow-hidden flex '>
-      {/* <Sidebar /> */}
-      <Homepage />
+    <div className="">
+           
     </div>
-  )
+  );
 }
 
 export default App
