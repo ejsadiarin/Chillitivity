@@ -10,6 +10,9 @@ export default function Homepage() {
        <div className="flex justify-center items-center m-9 ">
         <Youtube />
       </div>
+      <div>
+        <h1>test</h1>
+      </div>
 
     </div>
   );
