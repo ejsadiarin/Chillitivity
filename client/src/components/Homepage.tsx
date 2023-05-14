@@ -1,6 +1,10 @@
 import Youtube from "./Youtube";
 
 export default function Homepage() {
+
+  function test() {
+    // testing vim key motions() =
+  }
   
   return (
     <div className="bg-slate-900 text-white flex flex-col 

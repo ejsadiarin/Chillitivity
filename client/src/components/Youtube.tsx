@@ -6,26 +6,15 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 export default function Youtube() {
   const [videoId, setVideoId] = useState("jfKfPfyJRdk");
 
-  // useEffect(() => {
-  //   async function getVideos() {    
-  //     const videos = await axios.get(url);
-  //     console.log(videos);
-      
-  //     setTitle(videos.data.items[1].snippet.title);
-    
-  //   }
-  //   getVideos();
-  // }, [])
-
   // validate link sent by getting the last 11 characters (video Id)
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handlePrev(e: MouseEvent) {
     e.preventDefault();
   }
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    setVideoId(e.target.value);
-  }
+    function handleNext(e: MouseEvent) {
+      setVideoId();
+    }
 
   // Check YouTube iframe API reference for customization
  // test 
@@ -42,12 +31,22 @@ export default function Youtube() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         className='w-[35rem] h-96' 
       />    
-
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={videoId} onChange={handleChange}/>
-        <button type='submit'>Submit</button>
-      </form>
+      <button onClick={handlePrev}>Prev</button>
+      <button onClick={handleNext}>Next</button>
     </div>
   );
 }
 
+
+
+// YOUTUBE API (archive for review)
+  // useEffect(() => {
+  //   async function getVideos() {    
+  //     const videos = await axios.get(url);
+  //     console.log(videos);
+      
+  //     setTitle(videos.data.items[1].snippet.title);
+    
+  //   }
+  //   getVideos();
+  // }, [])
