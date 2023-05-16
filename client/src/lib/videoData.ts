@@ -6,8 +6,15 @@ type videoDataProps = {
 
 export const videoData: Array<videoDataProps> = [
   {
-    videoId: "tx3ae14MWl8", 
-    category: 
-
+    videoId: "rrLN10pd8BQ", 
+    category: "music" 
+  },
+  {
+    videoId: "jfKfPfyJRdk",
+    category: "lofi"
+  },
+  {
+    videoId: "e3L1PIY1pN8",
+    category: "lofi"
   },
 ]

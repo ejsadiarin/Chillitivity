@@ -1,12 +1,14 @@
-import { useState } from "react";
 import Homepage from "./components/Homepage";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
 
   return (
-    <div className="bg-blue-950">
-      <Homepage />
-    </div>
+    <ChakraProvider>
+      <div>
+        <Homepage />
+      </div>
+    </ChakraProvider>
   );
 }
 
