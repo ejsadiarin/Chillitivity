@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import { videoData } from '../lib/videoData';
 
 // const apiKey = "AIzaSyDjw87K6xjMnMtfgvgFMuZsDj8BZ0d37Aw"; // change and put into .env
@@ -7,15 +7,18 @@ import { videoData } from '../lib/videoData';
 
 export default function Youtube() {
   const [videoId, setVideoId] = useState(videoData[0].videoId);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // validate link sent by getting the last 11 characters (video Id)
 
   function handlePrev() {
-    setVideoId(videoData[1].videoId);
+    setCurrentIndex((prevIndex) => prevIndex === 0 ? videoData.length : prevIndex - 1);
+    setVideoId(videoData[currentIndex].videoId);
   }
 
     function handleNext() {
-      setVideoId(videoData[2].videoId);
+      setCurrentIndex((prevIndex) => prevIndex === videoData.length - 1 ? 0 : prevIndex + 1);
+      setVideoId(videoData[currentIndex].videoId);
     }
 
   // Check YouTube iframe API reference for customization
