@@ -2,7 +2,14 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			width: {
+				iframeWidth: "20rem",
+			},
+			height: {
+				iframeHeight: "10rem",
+			},
+		},
 	},
 	plugins: [],
 };
