@@ -19,7 +19,7 @@ export default function Youtube() {
       console.log("loading");
       setIsLoading(false);
       setCurrentIndex((prevIndex) => prevIndex === 0 ? videoData.length : prevIndex - 1);
-      setVideoId(videoData[currentIndex].videoId);
+       setVideoId(videoData[currentIndex].videoId);
     }, 1000);
 
     setIsLoading(true);
