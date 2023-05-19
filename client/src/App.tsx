@@ -6,6 +6,7 @@ function App() {
   return (
     <ChakraProvider>
       <div>
+        <div> Commit from Neovim POG </div>
         <Homepage />
       </div>
     </ChakraProvider>
