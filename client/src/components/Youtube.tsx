@@ -47,7 +47,7 @@ export default function Youtube() {
           // skeleton ui here (react-loading-skeleton)
           <>
             <Skeleton
-              className="w-iframeWidth h-iframeHeight"
+              className="w-iframeWidthMobile h-iframeHeight"
               baseColor="#1f2f3f"
               highlightColor="#7cc0d8"
             />
@@ -63,7 +63,7 @@ export default function Youtube() {
               frameBorder="0"
               unselectable="on"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              className="w-iframeWidth h-iframeHeight"
+              className="w-iframeWidthMobile h-iframeHeight"
             />
           </>
         )}

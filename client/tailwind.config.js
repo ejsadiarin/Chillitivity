@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			width: {
-				iframeWidth: "20rem",
+				iframeWidthMobile: "20rem",
 			},
 			height: {
 				iframeHeight: "10rem",
