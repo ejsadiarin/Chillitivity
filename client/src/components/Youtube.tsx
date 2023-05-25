@@ -54,7 +54,9 @@ export default function Youtube() {
           </>
         ) : (
           <>
-            {/* <h1 className='text-sm'>lofi hip hop radio 📚 - beats to relax/study to</h1> */}
+            <h1 className="text-sm">
+              Enjoy, chill, study, and get your cup of tea or coffee
+            </h1>
             <iframe
               width="100"
               height="100"
