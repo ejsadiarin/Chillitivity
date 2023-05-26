@@ -2,7 +2,11 @@ import { useState } from "react";
 import { videoData } from "../lib/videoData";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { AiFillBackward, AiOutlineForward } from "react-icons/ai";
+import {
+  AiFillBackward,
+  AiOutlineForward,
+  AiOutlinePause,
+} from "react-icons/ai";
 
 // const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCSJ4gkVC6NrvII8umztf0Ow&eventType=live&maxResults=3&q=news&type=video&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
 export default function Youtube() {
@@ -41,8 +45,9 @@ export default function Youtube() {
   }
 
   // Check YouTube iframe API reference for customization
+  // https://developers.google.com/youtube/player_parameters
   return (
-    <div>
+    <div className="flex flex-col">
       {/* Iframe div with loading skeleton */}
       <div>
         {isLoading ? (
@@ -56,7 +61,7 @@ export default function Youtube() {
           </>
         ) : (
           <>
-            <h1 className="text-sm">
+            <h1 className="text-xs">
               Enjoy, chill, study, and get your cup of tea or coffee
             </h1>
             <iframe
@@ -67,21 +72,23 @@ export default function Youtube() {
               frameBorder="0"
               unselectable="on"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              className="w-iframeWidthMobile h-iframeHeight"
+              className="w-iframeWidthMobile h-iframeHeight m-4"
             />
+            <div className="flex justify-between w-iframeWidthMobile m-4 mt-2">
+              <button onClick={handlePrev} className="flex items-center ">
+                <AiFillBackward />
+                <p>Prev</p>
+              </button>
+              <button>
+                <AiOutlinePause />
+              </button>
+              <button onClick={handleNext} className="flex items-center">
+                <p>Next</p>
+                <AiOutlineForward />
+              </button>
+            </div>
           </>
         )}
-      </div>
-
-      <div className="flex gap-5">
-        <div onClick={handlePrev} className="flex items-center">
-          <AiFillBackward />
-          <p>Prev</p>
-        </div>
-        <button onClick={handleNext} className="flex items-center">
-          <p>Next</p>
-          <AiOutlineForward />
-        </button>
       </div>
     </div>
   );
