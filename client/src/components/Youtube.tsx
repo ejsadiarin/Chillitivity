@@ -2,10 +2,13 @@ import { useState } from "react";
 import { videoData } from "../lib/videoData";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { AiFillBackward, AiOutlineForward } from "react-icons/ai";
 
 // const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCSJ4gkVC6NrvII8umztf0Ow&eventType=live&maxResults=3&q=news&type=video&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
 export default function Youtube() {
-  const [videoId, setVideoId] = useState(videoData[0].videoId);
+  const [videoId, setVideoId] = useState(
+    videoData[videoData.length - 1].videoId
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -38,7 +41,6 @@ export default function Youtube() {
   }
 
   // Check YouTube iframe API reference for customization
-  // test
   return (
     <div>
       {/* Iframe div with loading skeleton */}
@@ -61,7 +63,7 @@ export default function Youtube() {
               width="100"
               height="100"
               title="YouTube video player"
-              src={`https://www.youtube.com/embed/${videoId}`}
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&disablekb=1&rel=0`}
               frameBorder="0"
               unselectable="on"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -72,8 +74,14 @@ export default function Youtube() {
       </div>
 
       <div className="flex gap-5">
-        <button onClick={handlePrev}>Prev</button>
-        <button onClick={handleNext}>Next</button>
+        <div onClick={handlePrev} className="flex items-center">
+          <AiFillBackward />
+          <p>Prev</p>
+        </div>
+        <button onClick={handleNext} className="flex items-center">
+          <p>Next</p>
+          <AiOutlineForward />
+        </button>
       </div>
     </div>
   );
