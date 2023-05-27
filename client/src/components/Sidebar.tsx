@@ -13,6 +13,7 @@ export default function Sidebar() {
   return (
     <div className="bg-[#0a101a] p-3">
       <div className="flex items-center gap-7">
+        {/* TODO: change GiHamburgerMenu to something when it is clicked(opened) */}
         <GiHamburgerMenu
           className="w-[3rem] h-[5rem] cursor-pointer"
           onClick={handleOpenMenu}
